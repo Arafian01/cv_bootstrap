@@ -41,16 +41,16 @@
       <nav class="bg-dark text-white fw-bold mt-3">
         <div class="row text-center p-2">
           <div class="col-3">
-            <a class="nav-link" href="#profile">Profile</a>
+            <a class="nav-link" href="#profile" onclick="navigation('profile')">Profile</a>
           </div>
           <div class="col-3">
-            <a class="nav-link" href="#edukasi">Edukasi</a>
+            <a class="nav-link" href="#edukasi" onclick="navigation('edu')">Edukasi</a>
           </div>
           <div class="col-3">
-            <a class="nav-link" href="#pengalaman">Experience</a>
+            <a class="nav-link" href="#pengalaman" onclick="navigation('exp')">Experience</a>
           </div>
           <div class="col-3">
-            <a class="nav-link" href="#skill">Skill</a>
+            <a class="nav-link" href="#skill" onclick="navigation('skil')">Skill</a>
           </div>
         </div>
       </nav>
@@ -93,7 +93,7 @@
           untuk melakukan yang terbaik
         </p>
       </section>
-      <section id="skill">
+      <section id="skills">
         <h4>Keahlian</h4>
         <h6>Bahasa Pemrograman</h6>
         <ul>
@@ -107,6 +107,41 @@
         </ul>
       </section>
     </div>
+    <script>
+        document.getElementById('profile').style.display = 'none';
+        document.getElementById('edukasi').style.display = 'none';
+        document.getElementById('pengalaman').style.display = 'none';
+        document.getElementById('skills').style.display = 'none';
+        function navigation(id){
+          if(id === 'profile'){
+            document.getElementById('profile').style.display = 'block';
+            document.getElementById('edukasi').style.display = 'none';
+            document.getElementById('pengalaman').style.display = 'none';
+            document.getElementById('skills').style.display = 'none';
+          }else if(id === 'edu'){
+            document.getElementById('profile').style.display = 'none';
+            document.getElementById('edukasi').style.display = 'block';
+            document.getElementById('pengalaman').style.display = 'none';
+            document.getElementById('skills').style.display = 'none';
+          }else if(id === 'exp'){
+            document.getElementById('profile').style.display = 'none';
+            document.getElementById('edukasi').style.display = 'none';
+            document.getElementById('pengalaman').style.display = 'block';
+            document.getElementById('skills').style.display = 'none';
+          }else if(id === 'skil'){
+            document.getElementById('profile').style.display = 'none';
+            document.getElementById('edukasi').style.display = 'none';
+            document.getElementById('pengalaman').style.display = 'none';
+            document.getElementById('skills').style.display = 'block';
+          } else {
+            document.getElementById('profile').style.display = 'none';
+            document.getElementById('edukasi').style.display = 'none';
+            document.getElementById('pengalaman').style.display = 'none';
+            document.getElementById('skills').style.display = 'none';
+          }
+          
+        }
+      </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
