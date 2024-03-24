@@ -1,153 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <style>
     #home {
-      height: 100vh; 
+      height: 100vh;
       background-image: url(top-view-desk-concept-with-coffee.jpg);
       background-size: cover;
       background-position: center;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       color: white;
     }
+
     #content {
-      height: 90vh; 
+      height: 90vh;
+    }
+
+    .reveal {
+      position: relative;
+      transform: translateY(150px);
+      opacity: 0;
+      transition: all 2s ease;
+    }
+
+    .reveal.active {
+      transform: translateY(0px);
+      opacity: 1;
     }
   </style>
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand text-light fw-bold " href="#home">CV</a>
-    <ul class="nav nav-underline">
-      <li class="nav-item">
-        <a class="nav-link text-light" href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 1 16 16">
-          <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
-        </svg> Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="#content" onclick="navigation('edu')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 1 16 16">
-          <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z"/>
-          <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z"/>
-        </svg> Education</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="#content" onclick="navigation('exp')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 1 16 16">
-          <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
-          <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
-        </svg> Experience</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="#content" onclick="navigation('skil')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wrench-adjustable-circle" viewBox="0 0 16 16">
-          <path d="M12.496 8a4.5 4.5 0 0 1-1.703 3.526L9.497 8.5l2.959-1.11q.04.3.04.61"/>
-          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-1 0a7 7 0 1 0-13.202 3.249l1.988-1.657a4.5 4.5 0 0 1 7.537-4.623L7.497 6.5l1 2.5 1.333 3.11c-.56.251-1.18.39-1.833.39a4.5 4.5 0 0 1-1.592-.29L4.747 14.2A7 7 0 0 0 15 8m-8.295.139a.25.25 0 0 0-.288-.376l-1.5.5.159.474.808-.27-.595.894a.25.25 0 0 0 .287.376l.808-.27-.595.894a.25.25 0 0 0 .287.376l1.5-.5-.159-.474-.808.27.596-.894a.25.25 0 0 0-.288-.376l-.808.27z"/>
-        </svg> Skills</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-light fw-bold " href="#home">CV</a>
+      <ul class="nav nav-underline">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              fill="currentColor" class="bi bi-house-door-fill" viewBox="0 1 16 16">
+              <path
+                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+            </svg> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#content" onclick="navigation('edu')"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-mortarboard-fill" viewBox="0 1 16 16">
+              <path
+                d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z" />
+              <path
+                d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z" />
+            </svg> Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#content" onclick="navigation('exp')"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill"
+              viewBox="0 1 16 16">
+              <path
+                d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5" />
+              <path
+                d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z" />
+            </svg> Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#content" onclick="navigation('skil')"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-wrench-adjustable-circle" viewBox="0 0 16 16">
+              <path d="M12.496 8a4.5 4.5 0 0 1-1.703 3.526L9.497 8.5l2.959-1.11q.04.3.04.61" />
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-1 0a7 7 0 1 0-13.202 3.249l1.988-1.657a4.5 4.5 0 0 1 7.537-4.623L7.497 6.5l1 2.5 1.333 3.11c-.56.251-1.18.39-1.833.39a4.5 4.5 0 0 1-1.592-.29L4.747 14.2A7 7 0 0 0 15 8m-8.295.139a.25.25 0 0 0-.288-.376l-1.5.5.159.474.808-.27-.595.894a.25.25 0 0 0 .287.376l.808-.27-.595.894a.25.25 0 0 0 .287.376l1.5-.5-.159-.474-.808.27.596-.894a.25.25 0 0 0-.288-.376l-.808.27z" />
+            </svg> Skills</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<section id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <img src="profile.jpg" alt="foto profil" class="img-fluid rounded-circle " style="width: 200px;">
-        <h1 class="mt-4 fw-bold">ARAFIAN HAFIZ</h1>
-        <p>PROGRAMMER</p>
+  <section id="home"  class="justify-content-center align-items-center text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="profile.jpg" alt="foto profil" class="img-fluid rounded-circle " style="width: 200px;">
+          <h1 class="mt-4 fw-bold">ARAFIAN HAFIZ</h1>
+          <p>PROGRAMMER</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="content">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card mt-5 shadow p-3 mb-5 rounded">
-          <div class="card-body">
-            <section id="edukasi">
-              <h4>Pendidikan</h4>
-              <h6>2020-2023</h6>
-              <p>Jurusan Rekayasa Perangkat Lunak</p>
-              <p>SMKN 1 Kawali</p>
-              <p>Mata Pelajaran relevan:</p>
-              <p> 
-                Pemrograman Web dan Perangkat Bergerak, Basis Data, Pemrograman
-                Berorientasi Obyek, Pemodelan Perangkat Lunak
-              </p>
-            </section>
-            <section id="pengalaman">
-              <h4>Pengalaman</h4>
-              <h6>Oktober - Desember 2022</h6>
-              <h6>Cikara Studio</h6>
-              <p>
-                Terlibat dalam project pembuatan game Galuh Adventure, termasuk
-                pengembangan game,
-              </p>
-              <p>
-                Belajar tentang penggunaan perangkat lunak pengembangan game,
-                sekaligus cara pembuatan sebuah game
-              </p>
-              <p>
-                Mendukung dalam melakukan pengembangan game dan mengatur semua tim
-                untuk melakukan yang terbaik
-              </p>
-            </section>
-            <section id="skills">
-              <h4>Keahlian</h4>
-              <h6>Bahasa Pemrograman</h6>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>PHP</li>
-                <li>Javascript</li>
-                <li>Java</li>
-                <li>C++</li>
-                <li>C#</li>
-              </ul>
-            </section>
+  <sectio id="Summary">
+    <div class="container  reveal">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card shadow p-3 mb-5 rounded">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6">
+                  <img src="" alt="">
+                </div>
+                <div class="col-6">
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </sectio>
+  <section id="content">
+    <div class="container reveal">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mt-5 shadow p-3 mb-5 rounded">
+            <div class="card-body">
+              <section id="edukasi">
+                <h4 class="fw-bold">Pendidikan</h4>
+                <h6>2020-2023</h6>
+                <p>Jurusan Rekayasa Perangkat Lunak</p>
+                <p>SMKN 1 Kawali</p>
+                <p>Tentang Saya:</p>
+                <p>
+                  Saya adalah lulusan SMKN 1 Kawali dengan jurusan Rekayasa Perangkat Lunak. Selama masa pendidikan,
+                  saya mengembangkan keterampilan dalam berbagai aspek pengembangan perangkat lunak, termasuk
+                  pengembangan Front-end, Back-end, Mobile, Desktop, manajemen Database, serta pembuatan ERD dan
+                  flowchart.
+                </p>
+              </section>
+              <section id="pengalaman">
+                <h4 class="fw-bold">Pengalaman</h4>
+                <h6>Oktober - Desember 2022</h6>
+                <p>Cikara Studio</p>
+                <p>
+                  Selama periode saya di Cikara Studio, saya terlibat secara langsung dalam proyek pembuatan game Galuh
+                  Adventure. Dalam peran saya, saya tidak hanya berpartisipasi dalam pengembangan game secara langsung,
+                  tetapi juga secara aktif belajar tentang penggunaan perangkat lunak pengembangan game serta seluk
+                  beluk proses pembuatan sebuah game.
+                  Saya terlibat dalam berbagai aspek pengembangan game, mulai dari desain gameplay hingga implementasi
+                  fitur-fitur yang diperlukan. Selain itu, saya juga berperan dalam mendukung tim pengembangan game,
+                  mengatur tugas-tugas, dan memastikan bahwa semua anggota tim berkolaborasi secara efektif untuk
+                  mencapai tujuan proyek.
+                  Selama proses pengembangan game Galuh Adventure, saya belajar banyak tentang dinamika kerja dalam
+                  industri game, termasuk bagaimana mengatasi tantangan teknis dan kreatif yang muncul selama
+                  pengembangan game. Pengalaman ini telah memperkaya pengetahuan dan keterampilan saya dalam dunia
+                  pengembangan perangkat lunak, serta memperluas wawasan saya tentang proses pembuatan game secara
+                  keseluruhan.
+                </p>
+              </section>
+              <section id="skills">
+                <h4>Keahlian</h4>
+                <h6>Bahasa Pemrograman</h6>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>PHP</li>
+                  <li>Javascript</li>
+                  <li>Java</li>
+                  <li>C++</li>
+                  <li>C#</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark ">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="text-light p-2">Created by : Arafian Hafiz</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<script>
-  document.getElementById('edukasi').style.display = 'block';
-  document.getElementById('pengalaman').style.display = 'none';
-  document.getElementById('skills').style.display = 'none';
+  <script>
+    window.addEventListener('scroll', reveal)
 
-  function navigation(id) {
-    if (id === 'edu') {
-      document.getElementById('edukasi').style.display = 'block';
-      document.getElementById('pengalaman').style.display = 'none';
-      document.getElementById('skills').style.display = 'none';
-    } else if (id === 'exp') {
-      document.getElementById('edukasi').style.display = 'none';
-      document.getElementById('pengalaman').style.display = 'block';
-      document.getElementById('skills').style.display = 'none';
-    } else if (id === 'skil') {
-      document.getElementById('edukasi').style.display = 'none';
-      document.getElementById('pengalaman').style.display = 'none';
-      document.getElementById('skills').style.display = 'block';
-    } 
-  }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    function reveal() {
+      var reveals = document.querySelectorAll('.reveal');
+
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+        if (revealtop < windowheight - revealpoint) {
+          reveals[i].classList.add('active');
+        } else {
+          reveals[i].classList.remove('active');
+        }
+      }
+    }
+
+    document.getElementById('edukasi').style.display = 'block';
+    document.getElementById('pengalaman').style.display = 'none';
+    document.getElementById('skills').style.display = 'none';
+
+    function navigation(id) {
+      if (id === 'edu') {
+        document.getElementById('edukasi').style.display = 'block';
+        document.getElementById('pengalaman').style.display = 'none';
+        document.getElementById('skills').style.display = 'none';
+      } else if (id === 'exp') {
+        document.getElementById('edukasi').style.display = 'none';
+        document.getElementById('pengalaman').style.display = 'block';
+        document.getElementById('skills').style.display = 'none';
+      } else if (id === 'skil') {
+        document.getElementById('edukasi').style.display = 'none';
+        document.getElementById('pengalaman').style.display = 'none';
+        document.getElementById('skills').style.display = 'block';
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
@@ -157,4 +230,5 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 </body>
+
 </html>
