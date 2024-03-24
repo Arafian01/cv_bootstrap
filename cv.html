@@ -17,7 +17,7 @@
       color: white;
     }
 
-    #content {
+    #content, #summary, #profil{
       height: 90vh;
     }
 
@@ -94,17 +94,23 @@
   </section>
 
   <sectio id="Summary">
-    <div class="container  reveal">
+    <div class="container reveal">
       <div class="row">
         <div class="col-md-12">
-          <div class="card shadow p-3 mb-5 rounded">
+          <div class="card mt-5 shadow p-3 mb-5 rounded">
             <div class="card-body">
               <div class="row">
-                <div class="col-6">
-                  <img src="" alt="">
+                <div class="col-4 text-center">
+                  <img src="my-foto.png" alt="fotoku" style="width: 150px;">
                 </div>
-                <div class="col-6">
-
+                <div class="col-8">
+                  <h4 class="fw-bold text-uppercase mb-4">Summary</h4>
+                  <p>Lulusan SMK Teknik Jurusan Rekayasa Perangkat Lunak yang memiliki
+                    minat yang sangat besar bekerja di Bidang Programmmer. Dengan latar
+                    belakang pendidikan pengalaman PKL. saya telah memperoleh pegetahuan
+                    dan keterampilan praktis dalam bidang web develover dan game
+                    develover. Saya adalah individu yang teliti, analisis, dan memiliki
+                    kemampuan pemecahan masalah yang baik.</p>
                 </div>
               </div>
             </div>
@@ -113,11 +119,75 @@
       </div>
     </div>
   </sectio>
+
+  <section id="profil">
+    <div class="container reveal">
+      <h4 class="fw-bold text-uppercase">Profile</h4>
+        <table class="table table-borderless text-center mt-3">
+          <tbody>
+            <tr>
+              <td>Nama</td>
+              <td>Arafian Hafiz</td>
+            </tr>
+            <tr>
+              <td>Jenis Kelamin</td>
+              <td>Laki-Laki</td>
+            </tr>
+            <tr>
+              <td>Tanggal lahir</td>
+              <td>01 Januari 2005</td>
+            </tr>
+            <tr>
+              <td>Tempat lahir</td>
+              <td>Ciamis</td>
+            </tr>
+            <tr>
+              <td>Jenis Kelamin</td>
+              <td>Laki-Laki</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </section>
+
   <section id="content">
     <div class="container reveal">
       <div class="row">
         <div class="col-md-12">
           <div class="card mt-5 shadow p-3 mb-5 rounded">
+            <div class="card-title align-self-end">
+              <ul class="nav nav-underline ">
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="#content" onclick="navigation('edu')"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-mortarboard-fill" viewBox="0 1 16 16">
+                      <path
+                        d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z" />
+                      <path
+                        d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z" />
+                    </svg> Education</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark  " href="#content" onclick="navigation('exp')"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill"
+                      viewBox="0 1 16 16">
+                      <path
+                        d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5" />
+                      <path
+                        d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z" />
+                    </svg> Experience</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="#content" onclick="navigation('skil')"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-wrench-adjustable-circle" viewBox="0 0 16 16">
+                      <path d="M12.496 8a4.5 4.5 0 0 1-1.703 3.526L9.497 8.5l2.959-1.11q.04.3.04.61" />
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-1 0a7 7 0 1 0-13.202 3.249l1.988-1.657a4.5 4.5 0 0 1 7.537-4.623L7.497 6.5l1 2.5 1.333 3.11c-.56.251-1.18.39-1.833.39a4.5 4.5 0 0 1-1.592-.29L4.747 14.2A7 7 0 0 0 15 8m-8.295.139a.25.25 0 0 0-.288-.376l-1.5.5.159.474.808-.27-.595.894a.25.25 0 0 0 .287.376l.808-.27-.595.894a.25.25 0 0 0 .287.376l1.5-.5-.159-.474-.808.27.596-.894a.25.25 0 0 0-.288-.376l-.808.27z" />
+                    </svg> Skills</a>
+                </li>
+              </ul>
+            </div>
             <div class="card-body">
               <section id="edukasi">
                 <h4 class="fw-bold">Pendidikan</h4>
