@@ -119,9 +119,9 @@
     }
     .reveal {
       position: relative;
-      transform: translateY(150px);
+      transform: translateY(50px);
       opacity: 0;
-      transition: all 1s ease;
+      transition: all 2s ease;
     }
 
     .reveal.active {
@@ -139,6 +139,16 @@
     } 
     .custom-shape-divider-bottom-1711448800 .shape-fill {
       fill: #FFFFFF;
+    }
+    section {
+    min-height: 100vh;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: #1f242d;
+    }
+    section:nth-child(odd) {
+        background: #ffffff;
     }
   </style>
 </head>
@@ -182,10 +192,10 @@
   <section id="about">
     <div class="container reveal">
       <div class="row align-items-center">
-        <div class="col-lg-6 text-center">
+        <div class="col-lg-7 text-center">
           <img src="fotoku.png" alt="fotoku" style="width: 300px" />
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-5">
           <h4 class="fw-bold text-uppercase mb-4">Summary</h4>
           <p>
             Lulusan SMK Teknik Jurusan Rekayasa Perangkat Lunak yang
@@ -199,7 +209,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-7">
           <table class="table table-borderless mt-5">
             <tr>
               <td>Nama Lengkap</td>
@@ -223,14 +233,13 @@
             </tr>
           </table>
         </div>
-        <div class="col-lg-4 text-center">
-          <img src="fotoku2.png" alt="fotoku" style="width: 200px;">
+        <div class="col-lg-5 text-center">
+          <img src="fotoku2.png" alt="fotoku" style="width: 300px;">
         </div>
       </div>
-      <hr>
     </div>
-
   </section>
+  
   <section id="services">
     <div class="container reveal">
       <div class="row">
@@ -319,7 +328,7 @@
       <h1 class="text-center fw-bold">SKILLS</h1>
       <div class="row row-cols-2 row-cols-md-5 g-4 justify-content-center">
         <div class="col">
-          <div class="card align-items-center shadow p-3 mb-5 mt-5">
+          <div class="card align-items-center shadow p-3 mb-2 mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="144" height="144" viewBox="0 0 48 48">
               <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
               <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
@@ -335,7 +344,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card align-items-center shadow p-3 mb-5 mt-5">
+          <div class="card align-items-center shadow p-3 mb-2 mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="144" height="144" viewBox="0 0 48 48">
               <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
               <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
@@ -352,7 +361,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card align-items-center shadow p-3 mb-5 mt-5">
+          <div class="card align-items-center shadow p-3 mb-2 mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="144" height="144" viewBox="0 0 48 48">
               <path fill="#f7df1e" d="M6,42V6h36v36H6z"></path>
               <path fill="#000001"
@@ -365,7 +374,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card align-items-center shadow p-3 mb-5 mt-5">
+          <div class="card align-items-center shadow p-3 mb-2 mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="144" height="144" viewBox="0 0 80 80">
               <path fill="#dcd5f2"
                 d="M40,61.5C18.22,61.5,0.5,51.855,0.5,40S18.22,18.5,40,18.5S79.5,28.145,79.5,40S61.78,61.5,40,61.5z">
@@ -388,7 +397,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card align-items-center shadow p-3 mb-5 mt-5">
+          <div class="card align-items-center shadow p-3 mb-2 mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="144" height="144" viewBox="0 0 48 48">
               <path fill="#F44336"
                 d="M23.65,24.898c-0.998-1.609-1.722-2.943-2.725-5.455C19.229,15.2,31.24,11.366,26.37,3.999c2.111,5.089-7.577,8.235-8.477,12.473C17.07,20.37,23.645,24.898,23.65,24.898z">
@@ -419,7 +428,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card align-items-center shadow p-3 mb-5 mt-5">
+          <div class="card align-items-center shadow p-3 mb-2 mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="144" height="144" viewBox="0 0 48 48">
               <path fill="#37474f" fill-rule="evenodd"
                 d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z"
@@ -442,7 +451,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card align-items-center shadow p-3 mb-5 mt-5">
+          <div class="card align-items-center shadow p-3 mb-2 mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="144" height="144" viewBox="0 0 50 50">
               <path
                 d="M 44.082031 25.207031 L 46.902344 20.429688 C 47.015625 20.191406 47.03125 19.917969 46.945313 19.671875 L 41.359375 3.671875 C 41.1875 3.183594 40.675781 2.90625 40.179688 3.027344 L 23.761719 7.027344 C 23.449219 7.105469 23.191406 7.328125 23.070313 7.628906 L 21.324219 12 L 16 12 C 15.722656 12 15.453125 12.117188 15.265625 12.320313 L 3.265625 25.320313 C 2.894531 25.722656 2.914063 26.347656 3.308594 26.722656 L 15.894531 38.722656 C 16.078125 38.902344 16.328125 39 16.582031 39 L 22.320313 39 L 24.070313 43.371094 C 24.199219 43.695313 24.488281 43.925781 24.828125 43.984375 L 42.289063 46.984375 C 42.34375 46.996094 42.402344 47 42.457031 47 C 42.921875 47 43.332031 46.679688 43.433594 46.214844 L 46.976563 29.984375 C 47.03125 29.734375 46.988281 29.472656 46.851563 29.25 Z M 21.324219 12 L 35.417969 9.417969 L 28 24 L 11.167969 24 Z M 22.324219 39 L 11.167969 28 L 28 28 L 36.75 41.167969 Z M 40.386719 38.898438 L 32 26 L 39.332031 11.417969 L 44.082031 25.210938 Z">
@@ -457,7 +466,7 @@
     </div>
   </section>
   <section id="contact">
-    <div class="container reveal">
+    <div class="container reveal text-light">
       <div class="row g-3">
         <div class="col-lg-4 text-center">
           <h4 class="fw-bold">Contact info</h4>
