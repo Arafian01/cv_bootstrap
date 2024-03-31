@@ -13,10 +13,11 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: lightblue;
+            background: lightblue;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -69,16 +70,16 @@
 
         .profileText h2 {
             color: #fff;
-            font-size: 1.5rem;
+            font-size: 1.5em;
             margin-top: 20px;
             text-transform: uppercase;
             text-align: center;
             font-weight: 600;
-            line-height: 1.4rem;
+            line-height: 1.4em;
         }
 
         .profileText h2 span {
-            font-size: 0.8rem;
+            font-size: 0.8em;
             font-weight: 300;
         }
 
@@ -158,22 +159,108 @@
             background: #fff;
             padding: 40px;
         }
-        
-        .about{
+
+        .about {
             margin-bottom: 50px;
         }
 
-        .about:last-child{
+        .about:last-child {
             margin-bottom: 0;
         }
-        .title2{
+
+        .title2 {
             color: #003147;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 10px;
         }
-        p{
+
+        p {
             color: #333;
+        }
+        .about .box{
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0;
+        }
+        
+        .about .box .year_company{
+            min-width: 150px;
+        }
+        .about .box .year_company h5{
+            text-transform: uppercase;
+            color: #848c90;
+            font-weight: 600;
+        }
+        .about .box .text h4 {
+            text-transform: uppercase;
+            color: #2a7da2;
+            font-size: 16px;
+        }
+        .skills .box{
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        .skills .box h4{
+            text-transform: uppercase;
+            color: #848c99;
+            font-weight: 500;
+        }
+        .skills .box .percent{
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background: #f0f0f0;
+        }
+        .skills .box .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #03a9f4;
+        }
+        .interest ul{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .interest ul li{
+            list-style: none;
+            color: #333;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+        .interest ul li .fa{
+            color: #03a9f4;
+            font-size: 18px;
+            width: 20px;
+        }
+        @media (max-width: 1000px){
+            .container{
+                margin: 10px;
+                grid-template-columns: repeat(1,1fr);
+            }
+            .interest ul {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+        @media (max-width: 600px){
+            .about .box{
+                flex-direction: column;
+            }
+            .about .box .year_company{
+                min-width: 150px;
+                margin-bottom: 5px;
+            }
+            .interest ul {
+                grid-template-columns: repeat(1,1fr);
+            }
+            .skills .box{
+                grid-template-columns: repeat(1,1fr);
+            }
         }
     </style>
 </head>
@@ -185,7 +272,7 @@
                 <div class="imgBx">
                     <img src="asset/img/profile.jpg" alt="FOTOKU">
                 </div>
-                <h2>Arafian Hafiz<br><span>Web Develover</span></h2>
+                <h2>Arafian Hafiz<br><span>Fullstack Develover</span></h2>
             </div>
 
             <div class="contactInfo">
@@ -193,19 +280,15 @@
                 <ul>
                     <li>
                         <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                        <span class="text">+1 234 5678 900</span>
+                        <span class="text">+62 823 6571 990</span>
                     </li>
                     <li>
                         <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
                         <span class="text">arafianhafiz@gmail.com</span>
                     </li>
                     <li>
-                        <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
-                        <span class="text">www.mywebsite.com</span>
-                    </li>
-                    <li>
-                        <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
-                        <span class="text">www.linkedin.com/me</span>
+                        <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span>
+                        <span class="text">Arafian01</span>
                     </li>
                     <li>
                         <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
@@ -218,19 +301,14 @@
                 <h3 class="title">Education</h3>
                 <ul>
                     <li>
-                        <h5>2010 - 2015</h5>
-                        <h4>Master digre</h4>
-                        <h4>University</h4>
+                        <h5>2019 - 2022</h5>
+                        <h4>Rekayasa Perangkat Lunak</h4>
+                        <h4>SMKN 1 Kawali</h4>
                     </li>
                     <li>
-                        <h5>2010 - 2015</h5>
-                        <h4>Master digre</h4>
-                        <h4>University</h4>
-                    </li>
-                    <li>
-                        <h5>2010 - 2015</h5>
-                        <h4>Master digre</h4>
-                        <h4>University</h4>
+                        <h5>2023 - Sekarang</h5>
+                        <h4>Manajemen Informatika</h4>
+                        <h4>LP3I</h4>
                     </li>
                 </ul>
             </div>
@@ -241,19 +319,19 @@
                     <li>
                         <span class="text">English</span>
                         <span class="percent">
-                            <div style="width: 90%;"></div>
+                            <div style="width: 85%;"></div>
                         </span>
                     </li>
                     <li>
                         <span class="text">Jepang</span>
                         <span class="percent">
-                            <div style="width: 90%;"></div>
+                            <div style="width: 70%;"></div>
                         </span>
                     </li>
                     <li>
                         <span class="text">Indonesia</span>
                         <span class="percent">
-                            <div style="width: 90%;"></div>
+                            <div style="width: 95%;"></div>
                         </span>
                     </li>
                 </ul>
@@ -263,10 +341,87 @@
         <div class="right_Side">
             <div class="about">
                 <h2 class="title2">Profile</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non vel repudiandae asperiores excepturi
-                    veritatis maxime incidunt vitae aut, fuga accusamus qui. Numquam aliquid voluptates repudiandae
-                    ullam, officiis reprehenderit delectus molestias.</p>
+                <p>Lulusan SMK Teknik Jurusan Rekayasa Perangkat Lunak yang
+                    memiliki minat yang sangat besar bekerja di Bidang
+                    Programmmer. Dengan latar belakang pendidikan pengalaman
+                    PKL. saya telah memperoleh pegetahuan dan keterampilan
+                    praktis dalam bidang web develover dan game develover.
+                    Saya adalah individu yang teliti, analisis, dan memiliki
+                    kemampuan pemecahan masalah yang baik.</p>
             </div>
+
+            <div class="about">
+                <h2 class="title2">Experience</h2>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>Oktober - Desember 2022</h5>
+                        <h5>Cikara Studio</h5>
+                    </div>
+                    <div class="text">
+                        <h4>PKL</h4>
+                        <p>Selama periode saya di Cikara Studio, saya terlibat secara
+                            langsung dalam proyek pembuatan game Galuh Adventure. Dalam
+                            peran saya, saya tidak hanya berpartisipasi dalam
+                            pengembangan game secara langsung, tetapi juga secara aktif
+                            belajar tentang penggunaan perangkat lunak pengembangan game
+                            serta seluk beluk proses pembuatan sebuah game.Selama proses
+                            pengembangan game Galuh Adventure, saya belajar banyak
+                            tentang dinamika kerja dalam industri game, termasuk
+                            bagaimana mengatasi tantangan teknis dan kreatif yang muncul
+                            selama pengembangan game.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about skills">
+                <h2 class="title2">Professional Skills</h2>
+                <div class="box">
+                    <h4>Html</h4>
+                    <div class="percent">
+                        <div style="width: 98%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>CSS</h4>
+                    <div class="percent">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Javascript</h4>
+                    <div class="percent">
+                        <div style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Java</h4>
+                    <div class="percent">
+                        <div style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>PHP</h4>
+                    <div class="percent">
+                        <div style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>C#</h4>
+                    <div class="percent">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about interest">
+                <h2 class="title2">interest</h2>
+                <ul>
+                    <li><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</li>
+                    <li><i class="fa fa-headphones" aria-hidden="true"></i> Music</li>
+                    <li><i class="fa fa-film" aria-hidden="true"></i> watching movies</li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </body>
