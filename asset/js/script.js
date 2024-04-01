@@ -44,20 +44,20 @@ window.onscroll = () => {
     });
 };
 
-document.getElementById("edukasi").style.display = "block";
-document.getElementById("pengalaman").style.display = "none";
-document.querySelector(".N-edu").classList.add("active");
-document.querySelector(".N-exp").classList.remove("active");
-function navigation(id) {
-    if (id === "edu") {
-        document.getElementById("edukasi").style.display = "block";
-        document.getElementById("pengalaman").style.display = "none";
-        document.querySelector(".N-edu").classList.add("active");
-        document.querySelector(".N-exp").classList.remove("active");
-    } else if (id === "exp") {
-        document.getElementById("edukasi").style.display = "none";
-        document.getElementById("pengalaman").style.display = "block";
-        document.querySelector(".N-exp").classList.add("active");
-        document.querySelector(".N-edu").classList.remove("active");
-    }
-}
+// document.getElementById("smk").style.display = "block";
+// document.getElementById("kuliah").style.display = "none";
+// document.querySelector(".N-smk").classList.add("active");
+// document.querySelector(".N-kuliah").classList.remove("active");
+// function navigation(id) {
+//     if (id === "smk") {
+//         document.getElementById("smk").style.display = "block";
+//         document.getElementById("kuliah").style.display = "none";
+//         document.querySelector(".N-smk").classList.add("active");
+//         document.querySelector(".N-kuliah").classList.remove("active");
+//     } else if (id === "kuliah") {
+//         document.getElementById("smk").style.display = "none";
+//         document.getElementById("kuliah").style.display = "block";
+//         document.querySelector(".N-smk").classList.add("active");
+//         document.querySelector(".N-kuliah").classList.remove("active");
+//     }
+// }

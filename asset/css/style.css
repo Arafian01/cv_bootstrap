@@ -69,9 +69,8 @@ nav a.active {
     background-attachment: fixed;
 }
 
-.N-edu,
-.N-exp,
-.N-skil {
+.N-smk,
+.N-kuliah {
     cursor: pointer;
 }
 
